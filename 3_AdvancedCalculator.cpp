@@ -23,7 +23,7 @@ int main(){ // Калькулятор. Обработка деления на 0,
 			break;
 		case '-': result = a - b;
 			break;
-		case '*': result = a * b;
+		case '*': result = (float)a * b;
 			break;
 		case '/':
 			if (b == 0) {
