@@ -26,8 +26,10 @@ int main(){ // Калькулятор. Обработка деления на 0,
 		case '*': result = a * b;
 			break;
 		case '/':
-			if (b == 0)
+			if (b == 0) {
 				cout << "Делить на 0 нельзя\n";
+				cout << "Значение: ";
+				cin >> a;}
 			else
 				(float)result = (float)a / b;
 			break;
@@ -42,7 +44,7 @@ int main(){ // Калькулятор. Обработка деления на 0,
 		default:
 			break;
 		}
-		if (operation != 'c'){
+		if ((operation != 'c') && (b != 0)){
 			a = result;
 		}
 	}
