@@ -5,7 +5,7 @@ using std::cout;
 int main() {
 	setlocale(LC_ALL, "Russian");
 	int number1 = 0, number2 = 0, nc = 0, mc = 0, kc = 0, tc = 0, sum1 = 0, sum2 = 0;
-	cout << "Ââåäèòå íàòóðàëüíîå ÷èñëî: ";
+	cout << "ÐÐ°Ñ‚ÑƒÑ€Ð°Ð»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 	cin >> number1;
 	nc = number2 = kc = number1;
 	while (nc > 0){
