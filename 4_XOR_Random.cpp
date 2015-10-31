@@ -8,6 +8,5 @@ int xor_random(long int x){ // Генератора псевдослучайны
 	return x;
 }
 int main(){
-	cout << xor_random(5);
 	return 0;
 }
