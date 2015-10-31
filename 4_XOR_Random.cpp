@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 using std::cout;
-int xor_random(long int x){ // Генератора псевдослучайных чисел с помощью XOR
+int xor_random(int x){ // Генератора псевдослучайных чисел с помощью XOR
 	long int tmp = 0;
 	tmp ^= x << 13;
 	tmp ^= tmp >> 15;
