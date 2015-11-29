@@ -1,0 +1,34 @@
+#include <iostream>
+#include <clocale>
+using namespace std;
+
+int print_array(char a[], const int n){
+	for (int i = 0; i < n; i++){
+		cout << a[i] << " ";
+	}
+	cout << endl << endl;
+	return 0;
+}
+
+int rand_fill(char a[], const int n, char b[], char ad[]){
+	for (int i = 0; i < n;){
+		int r = rand() % 10;
+		if (ad[r] != '+'){
+			ad[r] = '+';
+			a[i] = b[r]; 
+			i++;
+		}
+	}
+	return 0;
+}
+
+int main(){
+	setlocale(LC_ALL, "Russian");
+	int const n = 10;
+	char a[n] = { 0 }, b[10] = { 'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'к' }, ad[n] = { '-' };
+	
+	rand_fill(a, n, b, ad);
+	print_array(a, n);
+
+	system("pause");
+}
