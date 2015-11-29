@@ -1,0 +1,55 @@
+#include <iostream>
+#include <clocale>
+using namespace std;
+
+// вывод  массива
+int print_array(int a[], const int n){
+	for (int i = 0; i < n; i++){
+		cout << a[i] << " ";
+	}
+	cout << endl << endl;
+	return 0;
+}
+
+// заполнение массива
+int fill(int a[], const int n, int &n_us){
+	cout << "Введите число реально используемой части массива: ";
+	cin >> n_us;
+	n_us %= n;
+	for (int i = 0; i < n_us; i++){
+		a[i] = i + 1;
+	}
+	return 0;
+}
+
+int add_elem(int a[], int const n, int &n_us){
+	int add = 0;
+	cout << "Введите число: ";
+	cin >> add;
+	for (int i = 0; i < n_us; i++){
+		if (a[i] == add){
+			a[i] = 0;
+			break;
+		}
+		else if(i == n_us - 1){
+			a[i + 1] = add;
+			n_us++;
+			break;
+		}
+	}
+	return 0;
+}
+
+int main(){
+	setlocale(LC_ALL, "Russian");
+	int const n = 100;
+	int a[n] = { 0 };
+	int n_us = 0;
+
+	fill(a, n, n_us);
+	print_array(a, n);
+	add_elem(a, n, n_us);
+	print_array(a, n);
+
+	system("pause");
+}
